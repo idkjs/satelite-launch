@@ -4,6 +4,7 @@ import './App.css';
 import * as React from 'react';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
+import TSPomodoro from './pomo/Clock';
 import Falcon9 from './Falcon9.gen';
 
 const {useState, useCallback} = React;
@@ -22,6 +23,7 @@ const TSApp = () => {
       </div>
       <div className="right">
         <TSCheckList onChange={setCheckListComplete} />
+        <TSPomodoro/>
         <TSCountDown
           onFinished={launch}
           run={checkListComplete}
